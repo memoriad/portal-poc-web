@@ -1,0 +1,45 @@
+<!-- header -->
+<header class="navbar" style="background-color: #b1b1b1;">
+    <!-- logo -->
+    <img src="/assets/images/webonline_header.png">
+  </header>
+  
+  <div class="columns is-gapless" style="margin-bottom: 0px;">
+    <div class="column is-2">
+      <div class="content" style="background-color: #b8c5bf; padding: 15px 5px 15px 5px; margin-bottom: 0px;">
+        <div style="margin-left: 13px;">
+          <strong class="title is-5">รหัสผู้ใช้: {{ currentUser?.userCode }}</strong>
+          <br />
+          <strong class="title is-5">เข้าสู่ระบบเมื่อ: {{ currentUser?.logonTime }}</strong>
+        </div>
+        <button class="button is-text" (click)="logout()"><strong class="title is-5">ออกจากระบบ</strong></button>
+      </div>
+  
+      <figure class="image is-fullwidth">
+        <img src="/assets/images/webonline_menu.png">
+      </figure>
+    </div>
+    <div class="column">
+      <div class="box" style="margin-bottom: 0px;">
+        <div class="columns">
+          <div class="column is-two-quarter">
+            <p class="title is-4">ชื่อผู้ใช้ : {{ currentUser?.fullname }}</p>
+          </div>
+          <div class="column is-two-quarter">
+            <p class="title is-4">ตำแหน่ง : {{ currentUser?.position }}</p>
+          </div>
+          <div class="column">
+            <p class="title is-4">สังกัด : {{ currentUser?.department }}</p>
+          </div>
+        </div>
+      </div>
+      <figure class="image is-fullwidth">
+        <img src="/assets/images/webonline_body.png">
+      </figure>
+    </div>
+  </div>
+  
+  <!-- footer -->
+  <footer class="footer">
+    <img src="/assets/images/webonline_footer.png">
+  </footer>

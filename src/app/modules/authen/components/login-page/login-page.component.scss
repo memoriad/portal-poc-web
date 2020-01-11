@@ -1,0 +1,27 @@
+.bg {
+  background-color: rgba(0, 148, 218, 0.9);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.login-card {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 7px solid white;
+}
+
+.img-logo {
+  border-right: 3px solid #0094da;
+  margin-right: 50px;
+  padding-right: 50px;
+}
+
+.from-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

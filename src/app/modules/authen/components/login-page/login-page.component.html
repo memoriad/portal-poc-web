@@ -1,0 +1,15 @@
+<div class="bg">
+  <mat-card class="login-card" style="min-width: 70%;">
+    <div class="from-login">
+      <img class="img-logo" style="margin-top:70px; margin-bottom:70px;" [src]="imgPath">
+      <div class="row">
+        <div class="column">
+          <button class="login-button" (click)="authen()" mat-flat-button color="primary">Login by Password</button>
+        </div>
+        <div class="column">
+          <button class="login-button" (click)="authen()" mat-flat-button color="primary">Login by Certificate</button>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>

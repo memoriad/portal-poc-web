@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+    margin: 0 auto;
+    background-color: #edf1fd;
+    line-height: 0;
+}
+
+img {
+    width: 100%;
+}
+
+$footer-padding: 0rem;
+$title-color: #504f72;
+
+@import "../node_modules/bulma/bulma.sass";
