@@ -45,6 +45,7 @@ export class AuthenService {
 
           // remove user from local storage to log user out
           localStorage.removeItem('currentUser');
+          localStorage.removeItem('authType')
           this.currentUserSubject.next(null);
         }),
         catchError(this.handleError('logout', null))

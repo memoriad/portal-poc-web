@@ -5,7 +5,6 @@ const CLIENT_ID = "JZ1GxfPfG8MwKZtCOyld31YO0bEa";
 
 const SCOPE = "openid profile email address phone";
 
-// const API_HOSTNAME = 'http://68.183.183.222:8080';
 const API_HOSTNAME = 'https://localhost:8443';
 const REDIRECT_URL = API_HOSTNAME + '/oauth2/callback';
 
@@ -15,7 +14,8 @@ export const environment = {
   services: {
     authen: {
       endpoint: {
-        loginWSO2: API_HOSTNAME + '/oauth2/authorization/wso2',
+        loginWSO2Password: API_HOSTNAME + '/oauth2/authorization/wso2-password',
+        loginWSO2Certificate: API_HOSTNAME + '/oauth2/authorization/wso2-certificate',
         login: GFMIS_OAUTH_API + "/oauth2/authorize?response_type=" + RESPONSE_TYPE + "&client_id=" + CLIENT_ID + "&redirect_uri=" + REDIRECT_URL + "&scope=" + SCOPE,
         accessToken: GFMIS_OAUTH_API + "/oauth2/token",
         loginClient: GFMIS_OAUTH_API + "/login",

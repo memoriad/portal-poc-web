@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import Notiflix from "notiflix-angular";
-import { Router } from '@angular/router';
 import { environment } from '@env';
 
 @Component({
@@ -18,29 +16,19 @@ export class LoginPageComponent implements OnInit {
     password: new FormControl(''),
   });
 
-  constructor(
-    private router: Router,
-  ) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  submit() {
-    if (this.formLogin.status == 'INVALID') {
-      Notiflix.Notify.Warning('Please fill username and password.');
-    }
-    else {
-      Notiflix.Loading.Init({ svgSize: "200px", svgColor: "#ffffff" });
-      Notiflix.Loading.Hourglass();
-      setTimeout(() => {
-        Notiflix.Loading.Remove();
-        this.router.navigate(['./home']);
-      }, 3000);
-    }
+  authenByPassword(){
+    localStorage.setItem('authType', 'password')
+    location.href = environment.services.authen.endpoint.loginWSO2Password;
   }
 
-  authen(){
-    location.href = environment.services.authen.endpoint.loginWSO2;
+  authenByCertificate(){
+    localStorage.setItem('authType', 'certificate')
+    location.href = environment.services.authen.endpoint.loginWSO2Certificate;
   }
 
 }

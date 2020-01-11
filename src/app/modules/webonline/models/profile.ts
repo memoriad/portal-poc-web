@@ -1,6 +1,6 @@
 export interface Profile {
     userCode: string;
-    fullname: string;
+    lastname: string;
     position: string;
     department: string;
     logonTime: string;
