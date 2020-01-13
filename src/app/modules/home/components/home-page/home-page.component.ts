@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthenService } from '@core/service/authen/authen.service';
 import Notiflix from "notiflix-angular";
 import { Router } from '@angular/router';

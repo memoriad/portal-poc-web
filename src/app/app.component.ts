@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     var inteval = 20
-    var redirect = "http://localhost:4200/logout"
+    var redirect = "http://10.220.12.100/logout"
     console.log("inteval: " + inteval);
     console.log("redirect: " + redirect);
 

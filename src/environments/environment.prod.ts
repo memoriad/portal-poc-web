@@ -1,12 +1,4 @@
-const GFMIS_OAUTH_API = "https://auth.nerves-cloud.com:9443"
-
-const RESPONSE_TYPE = "code";
-const CLIENT_ID = "JZ1GxfPfG8MwKZtCOyld31YO0bEa";
-
-const SCOPE = "openid profile email address phone";
-
-const API_HOSTNAME = 'https://localhost:8443';
-const REDIRECT_URL = API_HOSTNAME + '/oauth2/callback';
+const API_HOSTNAME = 'https://10.220.12.100';
 
 export const environment = {
   production: true,
@@ -16,20 +8,10 @@ export const environment = {
       endpoint: {
         loginWSO2Password: API_HOSTNAME + '/oauth2/authorization/wso2-password',
         loginWSO2Certificate: API_HOSTNAME + '/oauth2/authorization/wso2-certificate',
-        login: GFMIS_OAUTH_API + "/oauth2/authorize?response_type=" + RESPONSE_TYPE + "&client_id=" + CLIENT_ID + "&redirect_uri=" + REDIRECT_URL + "&scope=" + SCOPE,
-        accessToken: GFMIS_OAUTH_API + "/oauth2/token",
-        loginClient: GFMIS_OAUTH_API + "/login",
-        accessTokenByCode: GFMIS_OAUTH_API + "/wso2/oauth2/token",
+        logoutWSO2: 'https://10.220.12.100:8443/oidc/logout?post_logout_redirect_uri=http://10.220.12.100/logout',
         userme: API_HOSTNAME + '/user/me',
         logout: API_HOSTNAME + "/logout"
       }
     },
-    profile: {
-      endpoint: {
-        profile: GFMIS_OAUTH_API + "/oauth2/userinfo"
-      }
-    }
   }
 };
-
-

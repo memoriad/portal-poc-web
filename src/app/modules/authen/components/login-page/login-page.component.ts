@@ -9,8 +9,6 @@ import { environment } from '@env';
 })
 export class LoginPageComponent implements OnInit {
 
-  imgPath = environment.ASSET_PATH + '/images/header_section_01.png';
-
   formLogin: FormGroup = new FormGroup({
     username: new FormControl(''),
     password: new FormControl(''),
